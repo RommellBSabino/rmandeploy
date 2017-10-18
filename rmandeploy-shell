@@ -145,6 +145,11 @@ elif [ "$v_VERSION" = "12c" ]; then
  fi
 fi
 
+#Main logic: the loop below will:
+#1. First set the environment
+#2. Check ZFS existenct
+#3. Check TDE existence, then deploy the needed shell script.
+#4. wget the files needed from depot.
 for i in `echo "$CHECK_DB"`
 do
  echo "$CHECK_DB"

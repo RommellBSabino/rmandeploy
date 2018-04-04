@@ -219,3 +219,4 @@ fi
 #10/14/2017 -- Updated the SQL for bigfile check, some of the DBs configured the temp to be bigfile. Without the updating the sql the rmandeploy script will deploy the rman scripts for bigfile tablespaces.
 #10/17/2017 -- Modified the logic for deploying single instance. New SQL for encryption, a view that will both work on 10G+
 #10/18/2017 -- Added a separate code for version check since SQL for 10G encryption is not reliable to be used on none 10G and bigfile check for 12c CDB has a different view.
+#04/04/2018 -- Updated the crontab schedule for rmanMaintain. Since Mike P found recurring Level 1 error on mondays and after investigation it is found that the cause is the rmanMaintain and INC backups run at the sametime during mondays.
